@@ -83,8 +83,8 @@ ventas.forEach(p => {
     fila.innerHTML += `<td class="td">${p[1]}</td>`
     fila.innerHTML += `<td class="tdProducto">${p[2]}</td>`
     fila.innerHTML += `<td class="tdProductoD">${p[3]}</td>`
-    fila.innerHTML += `<td class="td">${p[4]}</td>`
-    fila.innerHTML += `<td class="td">${p[5]}</td>`
+    fila.innerHTML += `<td class="td">Bs.${p[4]}</td>`
+    fila.innerHTML += `<td class="td">Bs.${p[5]}</td>`
 
     cuerpoTabla.appendChild(fila);
 });
@@ -96,10 +96,10 @@ const impuesto = parametrosURL.get('impuesto');
 const descuento = parametrosURL.get('descuento');
 const total = parametrosURL.get('total');
 // Mostrando parametros en mi HTML
-document.querySelector("#subTotal").innerHTML = (subTotal);
-document.querySelector("#impuesto").innerHTML = (impuesto);
-document.querySelector("#descuento").innerHTML = (descuento);
-document.querySelector("#total").innerHTML = (total);
+document.querySelector("#subTotal").innerHTML = ("Bs."+subTotal);
+document.querySelector("#impuesto").innerHTML = ("Bs."+impuesto);
+document.querySelector("#descuento").innerHTML = ("Bs."+descuento);
+document.querySelector("#total").innerHTML = ("Bs."+total);
 
 //-----------DATOS PAGOS----------------------
 const pagado = parametrosURL.get('pagado');
@@ -146,7 +146,7 @@ console.log(tablaPagos)
  //-----------DATOS FALTANTE----------------------
  const faltante = parametrosURL.get('faltante');
  // Mostrando parametros en mi HTML
-document.querySelector("#faltante").innerHTML = (faltante);
+document.querySelector("#faltante").innerHTML = ("Bs."+faltante);
 
  //-----------DATOS ESTADO----------------------
  const estadoR = parametrosURL.get('estado');
