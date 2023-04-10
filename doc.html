@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ServiVENT-Ticket</title>
     <link rel="stylesheet" href="css/estilos_doc.css">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    
 </head>
 
 <body class="body">
@@ -31,12 +36,20 @@
                 </div>
                 <br>
                 <div class="botonDoc">
-                    
+                    <button type="button" onclick="CreatePDFfromHTML()">
+                        <figure>
+                            <img src="pdf.png">
+                            <div class="capa">
+                                <h3>DESCARGAR</h3>
+                                <p>PDF</p>
+                            </div>
+                        </figure>
+                    </button>
                 </div>
             </div>
             
             <div class="card" id="card">
-
+                <div class="contenedor_card" id="contenedor_card">
                 <div class="card_superior">
 
                     <div class="logo">
@@ -153,6 +166,7 @@
                     </div>
 
                 </div>
+               </div>
             </div>
             
 
